@@ -65,6 +65,6 @@ class FileStorage:
         """ Delete an element. """
         if obj is None:
             return
-        key = obj.__name__ + '.' + obj.id
+        key = (type(obj).__name__ + '.' + obj.id)
         if key in self.__objects:
-            self.__objects.remove(key)
+            del self.__objects[key]
