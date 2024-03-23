@@ -1,3 +1,4 @@
+-- Prepares a MySQL server for the project.
 -- Create the database if it does not exist
 CREATE DATABASE IF NOT EXISTS hbnb_dev_db;
 -- Create the user if it does not exist and set the password
