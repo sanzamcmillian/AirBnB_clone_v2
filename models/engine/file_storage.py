@@ -65,6 +65,10 @@ class FileStorage:
         """ Delete an element. """
         if obj is None:
             return
-        key = (type(obj).__name__ + '.' + obj.id)
-        if key in self.__objects:
-            self.__obj.remove(key)
+        if obj:
+            key = "{}.{}".format(type(obj).__name__,obj.id)
+            del self.__objects[key]
+    
+    def close(self):
+        """ Calls reload() function. """      
+        self.reload()  
