@@ -6,7 +6,7 @@ import models
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Table, String, Integer, Float, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-
+import shlex
 
 class Place(BaseModel, Base):
     """ A place to stay """
